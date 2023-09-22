@@ -9,38 +9,36 @@
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="@dimen/size_fifty"
+        android:layout_marginHorizontal="@dimen/size_fifty"
+        android:layout_marginTop="@dimen/size_one_hundred_fifty"
         android:background="@drawable/round"
         android:drawableStart="@drawable/create"
-        android:drawablePadding="10dp"
-        android:hint="Введите название манхвы"
-        android:padding="10dp"
-        android:paddingStart="10dp"
+        android:drawablePadding="@dimen/size_ten"
+        android:hint="@string/et_name"
+        android:padding="@dimen/size_ten"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/et_link"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/size_fifty"
         android:layout_below="@id/et_name"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="@dimen/size_fifty"
+        android:layout_marginTop="@dimen/size_fifty"
         android:background="@drawable/round"
         android:drawableStart="@drawable/search"
-        android:drawablePadding="10dp"
-        android:hint="Ссылка на картинку"
-        android:padding="10dp"
-        android:paddingStart="10dp"
+        android:drawablePadding="@dimen/size_ten"
+        android:hint="@string/et_link_hint"
+        android:padding="@dimen/size_ten"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <ProgressBar
         android:id="@+id/progress"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/size_one_hundred_fifty"
+        android:layout_height="@dimen/size_one_hundred_fifty"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:visibility="invisible" />
@@ -51,10 +49,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:text="Готово"
+        android:layout_marginBottom="@dimen/size_in_hundred"
+        android:text="@string/text_ready"
         android:textColor="@color/gray"
-        android:textSize="25sp"
+        android:textSize="@dimen/size_in_twenty_five"
         android:textStyle="bold" />
 
 </RelativeLayout>

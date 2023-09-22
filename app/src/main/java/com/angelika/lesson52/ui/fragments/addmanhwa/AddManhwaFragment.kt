@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.forEach
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.angelika.lesson52.R
 import com.angelika.lesson52.databinding.FragmentAddManhwaBinding
 import com.angelika.lesson52.models.Manhwa
 
@@ -36,10 +38,22 @@ class AddManhwaFragment : Fragment() {
             val name = binding.etName.text.toString().trim()
             val manhwa = Manhwa(url, name)
 
-            binding.progress.isVisible = true
-            binding.etLink.isVisible = false
-            binding.etName.isVisible = false
-            binding.textReady.isVisible = false
+//            binding.progress.isVisible = true
+//            binding.etLink.isVisible = false
+//            binding.etName.isVisible = false
+//            binding.textReady.isVisible = false
+
+//            binding.root.forEach {
+//                if (it.id == R.id.progress){
+//                    it.isVisible = true
+//                }else{
+//                    it.isVisible = false
+//                }
+
+            binding.root.forEach {
+                it.isVisible = it.id == R.id.progress
+            }
+
             viewModel.addManhwa(manhwa)
 
             android.os.Handler().postDelayed(

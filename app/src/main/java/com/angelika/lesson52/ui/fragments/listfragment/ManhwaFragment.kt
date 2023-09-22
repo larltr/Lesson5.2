@@ -41,8 +41,10 @@ class ManhwaFragment : Fragment() {
         binding.rvManhwa.adapter = manhwaAdapter
     }
 
-    private fun setupListeners() {
-        transition()
+    private fun setupListeners() = with(binding) {
+        btnAdd.setOnClickListener {
+            findNavController().navigate(R.id.action_manhwaFragment_to_addManhwaFragment)
+        }
     }
 
     private fun getManhwas() {
@@ -53,12 +55,6 @@ class ManhwaFragment : Fragment() {
         viewModel.manhwa.observe(viewLifecycleOwner) {
             Toast.makeText(requireContext(), it.isLoading.toString(), Toast.LENGTH_SHORT).show()
             manhwaAdapter.setManhwas(it.success)
-        }
-    }
-
-    private fun transition() = with(binding) {
-        btnAdd.setOnClickListener {
-            findNavController().navigate(R.id.action_manhwaFragment_to_addManhwaFragment)
         }
     }
 

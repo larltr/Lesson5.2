@@ -22,7 +22,7 @@ class ManhwaAdapter : RecyclerView.Adapter<ManhwaAdapter.ManhwaViewHolder>() {
         fun onBind(manhwa: Manhwa) = with(binding) {
             Glide.with(ivManhwa.context)
                 .load(manhwa.image)
-                .placeholder(R.drawable.ic_launcher_background)
+                .placeholder(R.drawable.images_link_not_found)
                 .into(ivManhwa)
             tvNameManhwa.text = manhwa.name
         }
